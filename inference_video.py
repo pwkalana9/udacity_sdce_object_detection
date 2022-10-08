@@ -91,10 +91,11 @@ def main(labelmap_path, model_path, tf_record_path, config_path, output_path):
     im_obj = ax.imshow(images[0])
 
     def animate(idx):
+        print("Animate index >> ", idx)
         image = images[idx]
         im_obj.set_data(image)
         
-    anim = animation.FuncAnimation(f, animate, frames=198)
+    anim = animation.FuncAnimation(f, animate, frames=19)
     anim.save(output_path, fps=5, dpi=300)
 
 
